@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Scanner App</title>
+  <link rel="stylesheet" href="styles6.css">
+</head>
+<body>
+  <header>
+    <h1>🔍 Object Scanner</h1>
+    <p>Scan objects, learn their functions, and test your knowledge!</p>
+  </header>
+
+  <main>
+    <!-- Scanner Section -->
+    <section id="scanner">
+      <h2>📷 Scan an Object</h2>
+      <div id="scanner-container">
+        <video id="camera" autoplay playsinline></video>
+        <div id="scanning-effect"></div>
+      </div>
+      <button id="scan-btn">Scan Now</button>
+      <p id="status">Ready to scan...</p>
+    </section>
+
+    <!-- Results Section -->
+    <section id="result" hidden>
+      <h2>🎉 Scan Result</h2>
+      <div id="info-box">
+        <img id="object-image" alt="Scanned Object Image">
+        <h3 id="object-name">Object Name:</h3>
+        <p id="object-function">Function:</p>
+      </div>
+      <button id="quiz-btn">Take a Quiz</button>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" hidden>
+      <h2>📝 Quiz Time</h2>
+      <div id="quiz-box">
+        <p id="question"></p>
+        <div id="answers">
+          <!-- Options will be dynamically loaded here -->
+        </div>
+      </div>
+      <p id="quiz-feedback"></p>
+      <button id="restart-btn">Scan Another Object</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Interactive Scanner App. All rights reserved.</p>
+  </footer>
+
+  <!-- TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script src="script6.js"></script>
+</body>
+</html>
